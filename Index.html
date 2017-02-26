@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Dank Memes</title>
+</head>
+
+<style>
+video {
+    width: 100%;
+    height: auto;
+}
+</style>
+
+<body>
+
+<a href="http://www.meatballs.com/" target="_blank" class="fa fa-facebook-official fa-3x" style="text-decoration:none; color:#3b5998;">
+
+<video id="myVideo" autoplay loop>
+  <source src="mom.mp4" type="video/mp4">
+  <source src="mom.mp4" type="video/mp4">
+</video>
+
+</a> 
+        <button id="playButton">Play/Pause</button>
+        <script type="text/javascript">
+            var myVideo = document.getElementById('myVideo');
+            var playButton = document.getElementById('playButton');
+
+            playButton.addEventListener('click', function () {
+                if (myVideo.play) {
+                    if (myVideo.requestFullscreen) {
+                        myVideo.requestFullscreen();
+                    }
+                    else if (myVideo.msRequestFullscreen) {
+                        myVideo.msRequestFullscreen();
+                    }
+                    else if (myVideo.mozRequestFullScreen) {
+                        myVideo.mozRequestFullScreen();
+                    }
+                    else if (myVideo.webkitRequestFullScreen) {
+                        myVideo.webkitRequestFullScreen();
+                    }
+                    myVideo.play();
+                }
+                else {
+                    myVideo.play();
+                }
+            }, false);
+</script>
+</body>
+
+</html>
